@@ -32,22 +32,18 @@ void showBlock() {
   rect(248, 0, 640, 640); //game display
   for (i=1; i<12; i++) { //show block!
     for (j=1; j<12; j++) {
-      if (blk[i][j]==1) {
-        fill(103, 212, 136); 
-        rect(204+i*57, -44+j*57, 44, 44);
-      } else if (blk[i][j]==2) {
-        fill(255, 0, 0);
-        round=0;
-        if (i==lastBlockX&&j==lastBlockY) round=44/4;
-        rect(204+i*57, -44+j*57, 44, 44, round);
-      } else if (blk[i][j]==3) {
-        fill(0, 0, 255);
-        round=0;
-        if (i==lastBlockX&&j==lastBlockY) round=44/4;
-        rect(204+i*57, -44+j*57, 44, 44, round);
-      }
+      fill(255);
+      if (blk[i][j]==1) fill(103, 212, 136); 
+      else if (blk[i][j]==2) fill(255, 0, 0);
+      else if (blk[i][j]==3) fill(0, 0, 255);
+      rect(204+i*57, -44+j*57, 44, 44);
     }
   }
+  fill(255);
+  rect(204+lastBlockX*57, -44+lastBlockY*57, 44, 44);
+  if(blk[lastBlockX][lastBlockY]==2) fill(255, 0, 0);
+  else fill(0, 0, 255);
+  rect(204+lastBlockX*57, -44+lastBlockY*57, 44, 44, 11);
 }
 
 void aWin() {
