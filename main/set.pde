@@ -4,7 +4,7 @@ import processing.net.*;
 SoundFile sound;
 Client myClient;
 
-PImage License;
+PImage License, musicAlbum, mileuIcon;
 
 int dataIn; 
 
@@ -52,6 +52,8 @@ void setup() {
   smooth();
   frameRate(60);
   License = loadImage("FONT.png");
+  musicAlbum = loadImage("music.jpg");
+  mileuIcon = loadImage("mileu.png");
   imageMode(CENTER);
 
   //block setting

@@ -8,6 +8,7 @@ void snglPvs() {
 
   fill(255, 0, 0);//red, playerA
   textAlign(CENTER, CENTER);
+  textSize(48);
   text("A", 124, 40);
   //timepanel
   fill(240, 248, 255);
@@ -130,6 +131,7 @@ void snglPvs() {
   //player B
 
   fill(0, 0, 255);//blue, playerB
+  textSize(48);
   text("B", 1012, 40);
   fill(240, 248, 255);
   noStroke();

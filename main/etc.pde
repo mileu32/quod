@@ -16,12 +16,16 @@ void menu() {
     rect(width/2, 27, width/4-24, 60);
     rect(width/4*3-24, 27, width/4-24, 60);
     textSize(48);
+    textAlign(CENTER, CENTER);
     fill(0);
     text("info", width/8+36, 57);
     text("quod v0.4.0b2", width/2, 120);
-    text("this software is by mileu", width/2, 192);
-    text("OST by Lepellec dominique", width/2, 264);
-    image(License, width/2, 350);
+    image(mileuIcon, width/2, 220, 130, 130);
+    text("this software is by mileu", width/2, 310);
+    image(musicAlbum, width/2, 400, 130, 130);
+    text("OST by Lepellec dominique", width/2, 490);
+    image(License, width/2, 560, 361, 145);
+    
   }
 }
 
