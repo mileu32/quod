@@ -7,6 +7,7 @@ void snglPvs() {
 
 
   fill(255, 0, 0);//red, playerA
+  textAlign(CENTER, CENTER);
   text("A", 124, 40);
   //timepanel
   fill(240, 248, 255);

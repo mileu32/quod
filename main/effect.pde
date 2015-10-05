@@ -1,4 +1,15 @@
 //chkQd : check if there is quod, if yes : 0, no : 1;
+//state
+void state() {
+  textAlign(RIGHT, CENTER);
+  fill(0);
+  text("server", width-60, 50);
+  stroke(255);
+  strokeWeight(3);
+  if(myClient.active()==true) fill(0, 255, 0);
+  else fill(255, 0, 0);
+  ellipse(width-50, 50, 20, 20);
+}
 void chkQd(int aorb) {
   int i, j, k, l, m, n, x, y, z, w;
   int round=0;

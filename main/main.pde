@@ -13,6 +13,7 @@ void draw() {
   else if (gmod==4) onlS(); // online Sign up
   else if (gmod==5) aWin();
   else if (gmod==6) bWin();
+  state();
   
   click=0;
 }

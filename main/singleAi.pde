@@ -6,6 +6,7 @@ void snglPai() {
 
   //red, playerA
   fill(255, 0, 0);
+  textAlign(CENTER, CENTER);
   text("A", 124, 40);
 
   //timepannel

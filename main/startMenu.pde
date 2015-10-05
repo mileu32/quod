@@ -6,6 +6,7 @@ void statM() {
     background(184, 241, 241);
     fill(23, 93, 126);
     textSize(120);
+    textAlign(CENTER, CENTER);
     text("Quod", width/2, 120);
     textSize(48);
     fill(0);
@@ -17,6 +18,7 @@ void statM() {
     textSize(120);
     noStroke();
     fill(23, 93, 126);
+    textAlign(CENTER, CENTER);
     text("Quod", width/2, 120);
     fill(255, 206, 160);
     rect(width/2-140, 300, 280, 70);
@@ -35,12 +37,14 @@ void statM() {
         if (click==-1) {
           gmod=1;
           click=0;
+          clicked=2;
         }
       } else if (mouseY>380&&mouseY<450) {
         rect(width/2-140, 380, 280, 70);
         if (click==-1) {
           gmod=2;
           click=0;
+          clicked=2;
         }
       } else if (mouseY>460&&mouseY<530) {
         rect(width/2-140, 460, 280, 70);
