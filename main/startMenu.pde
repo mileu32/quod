@@ -30,6 +30,7 @@ void statM() {
     text("Online Play", width/2, 415);
     text("Help", width/2, 495);
 
+
     if (mouseX>(width/2-140)&&mouseX<(width/2+140)) {
       fill(241, 232, 212);
       if (mouseY>300&&mouseY<370) {
@@ -41,7 +42,12 @@ void statM() {
         }
       } else if (mouseY>380&&mouseY<450) {
         rect(width/2-140, 380, 280, 70);
-        if (click==-1) {
+        if (myClient.active()==false) {
+          fill(255, 0, 0);
+          textAlign(CENTER, CENTER);
+          textSize(24);
+          text("server connection fail", width/2, 415);
+        } else if (click==-1) {
           gmod=2;
           click=0;
           clicked=2;

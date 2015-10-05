@@ -37,7 +37,7 @@ PFont font;
 
 void settings() {
   size(1136, 640);
-  //pixelDensity(2);
+  pixelDensity(2);
 }
 
 void setup() {

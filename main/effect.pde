@@ -2,6 +2,7 @@
 //state
 void state() {
   textAlign(RIGHT, CENTER);
+  textSize(30);
   fill(0);
   text("server", width-60, 50);
   stroke(255);
