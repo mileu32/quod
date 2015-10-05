@@ -26,17 +26,7 @@ void menu() {
     image(musicAlbum, width/2, 400, 130, 130);
     text("OST by Lepellec dominique", width/2, 490);
     image(License, width/2, 560, 361, 145);
-    if (mouseY<=87&&mouseY>=27) {
-      if (mouseX>=width/4+24&&mouseX<=width/2) {
-        fill(0);
-        text("display", width*3/8+12, 57);
-        if (click==1) menuKind=1;
-      } else if (mouseX>=width/2&&mouseX<=width*3/4-24) {
-        fill(0);
-        text("sound", width*5/8-12, 57);
-        if (click==1) menuKind=2;
-      }
-    }
+    upmenuButton();
     break;
 
   case 1:
@@ -50,6 +40,60 @@ void menu() {
     textAlign(CENTER, CENTER);
     fill(0);
     text("display", width*3/8+12, 57);
+    
+    upmenuButton();
+    break;
+
+  case 2:
+    fill(255, 159, 113);
+    rect(width/2, 27, width/4-24, 60);
+    fill(255, 198, 117);
+    rect(48, 27, width/4-24, 60);
+    rect(width/4+24, 27, width/4-24, 60);
+    rect(width/4*3-24, 27, width/4-24, 60);
+    textSize(48);
+    textAlign(CENTER, CENTER);
+    fill(0);
+    text("sound", width*5/8-12, 57);
+    
+    upmenuButton();
+    break;
+
+  case 3:
+    fill(255, 159, 113);
+    rect(width/4*3-24, 27, width/4-24, 60);
+    fill(255, 198, 117);
+    rect(48, 27, width/4-24, 60);
+    rect(width/4+24, 27, width/4-24, 60);
+    rect(width/2, 27, width/4-24, 60);
+    textSize(48);
+    textAlign(CENTER, CENTER);
+    fill(0);
+    text("network", width*7/8-36, 57);
+    upmenuButton();
+    break;
+  }
+}
+
+void upmenuButton() {
+  if (mouseY<=87&&mouseY>=27) {
+    if (mouseX>=48&&mouseX<=width/4+24) {
+      fill(0);
+      text("info", width/8+36, 57);
+      if (click==1) menuKind=0;
+    } else if (mouseX>=width/4+24&&mouseX<=width/2) {
+      fill(0);
+      text("display", width*3/8+12, 57);
+      if (click==1) menuKind=1;
+    } else if (mouseX>=width/2&&mouseX<=width*3/4-24) {
+      fill(0);
+      text("sound", width*5/8-12, 57);
+      if (click==1) menuKind=2;
+    } else if (mouseX>=width*3/4-24&&mouseX<width-48) {
+      fill(0);
+      text("network", width*7/8-36, 57);
+      if (click==1) menuKind=3;
+    }
   }
 }
 
