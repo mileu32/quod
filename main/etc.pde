@@ -187,3 +187,30 @@ void reset() {
   gmod=0;
   turn=-1;
 }
+
+void readText(){
+  int i=0;
+  int readableCache=1;
+  while(readableCache==1){
+    
+    try {
+    Settings[i] = reader.readLine();
+  } catch (IOException e) {
+    e.printStackTrace();
+    Settings[i] = null;
+  }
+  if(Settings[i] == null) readableCache=0;
+  i++;
+  }
+  
+}
+
+void indexText(){
+  int i=0;
+  while(Settings[i]!=null){
+    String indexTextCache[] = split(Settings[i], ":");
+    Settings[i]=trim(indexTextCache[1]);
+    i++;
+  }
+
+}

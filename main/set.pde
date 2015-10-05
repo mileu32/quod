@@ -5,7 +5,8 @@ SoundFile sound;
 Client myClient;
 
 PImage License, musicAlbum, mileuIcon;
-
+BufferedReader reader;
+String[] Settings = new String[20];
 int dataIn; 
 
 int gmod, turn;// game mode, 0:startmenu, 1:single, 2:UDP, 3:udp server, 4:udp client, 5:A win, 6:B win, turn is play turn 0:A(ai), 1:B(ai), 2: A after do his color block(ai), 3 : B after do his color block(ai) 4:A(1vs1), 5:B(1vs1), 6: A after do his color block(1vs1), 7 : B after do his color block(1vs1)
@@ -38,12 +39,18 @@ PFont font;
 
 
 void settings() {
+
   size(1136, 640);
   pixelDensity(2);
 }
 
 void setup() {
-  myClient = new Client(this, ServerIP2, 11084);//tcp port
+  reader = createReader("setting.txt");
+  readText();
+  indexText();
+  surface.setSize(parseInt(Settings[0]),parseInt(Settings[1]));
+  
+  myClient = new Client(this, Settings[2], parseInt(Settings[3]));//tcp port
   sound = new SoundFile(this, "music.mp3");
   sound.loop();
   surface.setTitle("quod v0.4.0b2");
