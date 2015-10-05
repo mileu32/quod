@@ -71,7 +71,7 @@ void onlL() {
     strokeWeight(5);
     stroke(249, 100, 45);
     textSize(48);
-    
+
     if (mouseX>(width/2-140)&&mouseX<(width/2+140)) {
       fill(241, 232, 212);
       if (mouseY>300&&mouseY<370) {
@@ -126,7 +126,7 @@ void onlLVSBefore() {
   fill(23, 93, 126);
   textAlign(CENTER, CENTER);
   text("Quod", width/2, 120);
-  
+
   textSize(30);    
   textAlign(CENTER, BOTTOM);
   switch(worldValid%10) {
@@ -261,27 +261,32 @@ void onlLVSBefore() {
     text("2/2", width/2+110, 470);
     break;
   }
-  
+
   fill(0);
   textAlign(CENTER, TOP);
   if (mouseX>width/2-160&&mouseX<=width/2-60&&mouseY>310&&mouseY<=410) {
     text("Join?", width/2-110, 360);
     if (click==1) myClient.write("w"+":"+"1"+":"+loginID+":"+"join"+"::");
-  }else if (mouseX>width/2-160&&mouseX<=width/2-60&&mouseY>420&&mouseY<=520) {
+  } else if (mouseX>width/2-160&&mouseX<=width/2-60&&mouseY>420&&mouseY<=520) {
     text("Join?", width/2-110, 470);
-    if (click==1) myClient.write("w"+":"+"4"+":"+loginID+":"+"join"+"::");;
-  }else if (mouseX>width/2-50&&mouseX<=width/2+50&&mouseY>310&&mouseY<=410) {
+    if (click==1) myClient.write("w"+":"+"4"+":"+loginID+":"+"join"+"::");
+    ;
+  } else if (mouseX>width/2-50&&mouseX<=width/2+50&&mouseY>310&&mouseY<=410) {
     text("Join?", width/2, 360);
-    if (click==1) myClient.write("w"+":"+"2"+":"+loginID+":"+"join"+"::");;
-  }else if (mouseX>width/2-50&&mouseX<=width/2+50&&mouseY>420&&mouseY<=520) {
+    if (click==1) myClient.write("w"+":"+"2"+":"+loginID+":"+"join"+"::");
+    ;
+  } else if (mouseX>width/2-50&&mouseX<=width/2+50&&mouseY>420&&mouseY<=520) {
     text("Join?", width/2, 470);
-    if (click==1) myClient.write("w"+":"+"5"+":"+loginID+":"+"join"+"::");;
-  }else if (mouseX>width/2+60&&mouseX<=width/2+160&&mouseY>310&&mouseY<=410) {
+    if (click==1) myClient.write("w"+":"+"5"+":"+loginID+":"+"join"+"::");
+    ;
+  } else if (mouseX>width/2+60&&mouseX<=width/2+160&&mouseY>310&&mouseY<=410) {
     text("Join?", width/2+110, 360);
-    if (click==1) myClient.write("w"+":"+"3"+":"+loginID+":"+"join"+"::");;
-  }else if (mouseX>width/2+60&&mouseX<=width/2+160&&mouseY>420&&mouseY<=520) {
+    if (click==1) myClient.write("w"+":"+"3"+":"+loginID+":"+"join"+"::");
+    ;
+  } else if (mouseX>width/2+60&&mouseX<=width/2+160&&mouseY>420&&mouseY<=520) {
     text("Join?", width/2+110, 470);
-    if (click==1) myClient.write("w"+":"+"6"+":"+loginID+":"+"join"+"::");;
+    if (click==1) myClient.write("w"+":"+"6"+":"+loginID+":"+"join"+"::");
+    ;
   }
 
   textSize(48);

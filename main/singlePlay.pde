@@ -1,7 +1,7 @@
 //set the mod of single play, with ai or 1 vs 1
 
 void snglP() {
-println("click : " + click + " // clicked : " + clicked);
+  println("click : " + click + " // clicked : " + clicked);
   if (turn<0) {
     if (clicked>0) {
       background(184, 241, 241);

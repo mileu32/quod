@@ -1,62 +1,62 @@
 //v0.4.0b2
 //beware for singleAI in ai check time.
 void draw() {
-//  println(frameRate);
-println(escmod);
+  //  println(frameRate);
+  println(escmod);
   if (myClient.available()>0) recieveServer();
   if (escmod == 0) menu();
-  else switch(gmod){
-    case 0:
+  else switch(gmod) {
+  case 0:
     statM();
     break;
-    
-    case 1:
+
+  case 1:
     snglP();
     break;
-    
-    case 2:
+
+  case 2:
     onL();
     break;
-    
-    case 3:
+
+  case 3:
     onlL();
     break;
-    
-    case -3:
+
+  case -3:
     onlLR();
     break;
-    
-    case 10:
+
+  case 10:
     onlLVSBefore();
     break;
-    
-    case 4:
+
+  case 4:
     onlS();
     break;
-    
-    case 5:
+
+  case 5:
     aWin();
     break;
-    
-    case 6:
+
+  case 6:
     bWin();
     break;
   }
-  if(statemod==1) state();
-  
+  if (statemod==1) state();
+
   click=0;
 }
 
 void mouseReleased() {
-    if(clicked==1) click=-1;
-    else click=1;
+  if (clicked==1) click=-1;
+  else click=1;
 
   clicked+=1;
 }
 
 void keyPressed() {
   if (key == TAB) {
-    if(escmod == -1) escmod=gmod;
+    if (escmod == -1) escmod=gmod;
     else escmod=-1;
   } else if ((key >= 'A' && key <= 'z') || ( key>= '0' && key <= '9')) {
     if (loginCache==0&&loginID.length()<8) {

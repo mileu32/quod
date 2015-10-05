@@ -61,7 +61,7 @@ void ai1(int player, int level, double score) { //player 0 is person, 1 is compu
 
 void ai() {
   int i, j, k, l, m, n, x, y, z, w;
-  
+
   int colorblock = 1; // check if computer have left blocks
   int aiX[] = new int[100];
   int aiY[] = new int[100];
@@ -142,7 +142,7 @@ void ai() {
       for (j=1; j<12; j++) {
         if (aiBlk[i][j]==1) {
           double score=0;
-          if(i>3&&i<9&&j>3&&j<9) score=0.1;
+          if (i>3&&i<9&&j>3&&j<9) score=0.1;
           aiBlk[i][j]=3;
           aicacheX=i;
           aicacheY=j;
@@ -151,8 +151,6 @@ void ai() {
         }
       }
     }
-    
   }
   aiFinish=1;
-
 }

@@ -8,7 +8,7 @@ void menu() {
   rect(32, 18, width-64, height-36);
   fill(241, 232, 212);
   rect(48, 27, width-96, height-54);
-  switch(escmod) {
+  switch(menuKind) {
   case 0:
     fill(255, 159, 113);
     rect(48, 27, width/4-24, 60);
@@ -26,7 +26,30 @@ void menu() {
     image(musicAlbum, width/2, 400, 130, 130);
     text("OST by Lepellec dominique", width/2, 490);
     image(License, width/2, 560, 361, 145);
-    
+    if (mouseY<=87&&mouseY>=27) {
+      if (mouseX>=width/4+24&&mouseX<=width/2) {
+        fill(0);
+        text("display", width*3/8+12, 57);
+        if (click==1) menuKind=1;
+      } else if (mouseX>=width/2&&mouseX<=width*3/4-24) {
+        fill(0);
+        text("sound", width*5/8-12, 57);
+        if (click==1) menuKind=2;
+      }
+    }
+    break;
+
+  case 1:
+    fill(255, 159, 113);
+    rect(width/4+24, 27, width/4-24, 60);
+    fill(255, 198, 117);
+    rect(48, 27, width/4-24, 60);
+    rect(width/2, 27, width/4-24, 60);
+    rect(width/4*3-24, 27, width/4-24, 60);
+    textSize(48);
+    textAlign(CENTER, CENTER);
+    fill(0);
+    text("display", width*3/8+12, 57);
   }
 }
 
@@ -46,7 +69,7 @@ void showBlock() {
   }
   fill(255);
   rect(204+lastBlockX*57, -44+lastBlockY*57, 44, 44);
-  if(blk[lastBlockX][lastBlockY]==2) fill(255, 0, 0);
+  if (blk[lastBlockX][lastBlockY]==2) fill(255, 0, 0);
   else fill(0, 0, 255);
   rect(204+lastBlockX*57, -44+lastBlockY*57, 44, 44, 11);
 }

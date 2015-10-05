@@ -7,7 +7,7 @@ void state() {
   text("server", width-60, 50);
   stroke(255);
   strokeWeight(3);
-  if(myClient.active()==true) fill(0, 255, 0);
+  if (myClient.active()==true) fill(0, 255, 0);
   else fill(255, 0, 0);
   ellipse(width-50, 50, 20, 20);
 }
@@ -23,12 +23,12 @@ void chkQd(int aorb) {
       } else if (blk[i][j]==2) {
         fill(255, 0, 0);
         round=0;
-        if(i==lastBlockX&&j==lastBlockY) round=44/4;
+        if (i==lastBlockX&&j==lastBlockY) round=44/4;
         rect(204+i*57, -44+j*57, 44, 44, round);
       } else if (blk[i][j]==3) {
         fill(0, 0, 255);
         round=0;
-        if(i==lastBlockX&&j==lastBlockY) round=44/4;
+        if (i==lastBlockX&&j==lastBlockY) round=44/4;
         rect(204+i*57, -44+j*57, 44, 44, round);
       }
     }
@@ -84,5 +84,4 @@ void chkQd(int aorb) {
       }
     }
   }
-
 }

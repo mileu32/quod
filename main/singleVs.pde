@@ -1,7 +1,7 @@
 //snglPvs() single play 1 vs 1 in one computer
 
 void snglPvs() {
-  
+
   background(184, 241, 241);
   showBlock();
 
