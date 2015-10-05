@@ -2,18 +2,47 @@
 //beware for singleAI in ai check time.
 void draw() {
 //  println(frameRate);
+println(escmod);
   if (myClient.available()>0) recieveServer();
   if (escmod == 0) menu();
-  else if (gmod == 0) statM();
-  else if (gmod == 1) snglP();
-  else if (gmod==2) onL(); //online
-  else if (gmod==3) onlL(); // online login
-  else if (gmod==-3) onlLR();//onlie login communicate with server
-  else if (gmod==10) onlLVSBefore();
-  else if (gmod==4) onlS(); // online Sign up
-  else if (gmod==5) aWin();
-  else if (gmod==6) bWin();
-  state();
+  else switch(gmod){
+    case 0:
+    statM();
+    break;
+    
+    case 1:
+    snglP();
+    break;
+    
+    case 2:
+    onL();
+    break;
+    
+    case 3:
+    onlL();
+    break;
+    
+    case -3:
+    onlLR();
+    break;
+    
+    case 10:
+    onlLVSBefore();
+    break;
+    
+    case 4:
+    onlS();
+    break;
+    
+    case 5:
+    aWin();
+    break;
+    
+    case 6:
+    bWin();
+    break;
+  }
+  if(statemod==1) state();
   
   click=0;
 }

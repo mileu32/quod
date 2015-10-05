@@ -2,6 +2,7 @@
 //showBlock : show gameboard
 //menu
 void menu() {
+  statemod=0;
   noStroke();
   fill(230, 158, 122);
   rect(32, 18, width-64, height-36);
@@ -92,7 +93,7 @@ void bWin() {
 }
 
 void reset() {
-
+  statemod=1;
   //block setting
   int i, j;
   for (i=1; i<12; i++)

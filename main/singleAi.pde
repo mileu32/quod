@@ -1,5 +1,6 @@
 //singleAI : single play with ai
 void snglPai() {
+ 
   
   background(184, 241, 241);
   showBlock();

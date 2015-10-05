@@ -1,6 +1,6 @@
 //statM : start menu
 void statM() {
-
+  statemod=1;
   if (clicked==0) {
 
     background(184, 241, 241);

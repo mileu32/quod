@@ -27,12 +27,14 @@ println("click : " + click + " // clicked : " + clicked);
           if (click==1) {
             turn=0;
             click=0;
+            statemod=0;
           }
         } else if (mouseY>380&&mouseY<450) {
           rect(width/2-140, 380, 280, 70);
           if (click==1) {
             turn=4;
             click=0;
+            statemod=0;
           }
         } else if (mouseY>460&&mouseY<530) {
           rect(width/2-140, 460, 280, 70);
