@@ -4,6 +4,7 @@ void onL() {
   if (clicked>0) {
     background(184, 241, 241);
     textSize(120);
+    textAlign(CENTER, CENTER);
     noStroke();
     fill(23, 93, 126);
     text("Quod", width/2, 120);
@@ -45,6 +46,7 @@ void onlL() {
 
     background(184, 241, 241);
     textSize(120);
+    textAlign(CENTER, CENTER);
     noStroke();
     fill(23, 93, 126);
     text("Quod", width/2, 120);
